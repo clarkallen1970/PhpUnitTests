@@ -5,7 +5,10 @@
         //should return true if a valid email address is passed to it
         //or false if an invalid email address is passed to it
         public static function is_valid_email_format($email) {
-            return filter_var($email, FILTER_VALIDATE_EMAIL);
+        if (filter_var($email, FILTER_VALIDATE_EMAIL) == $email) return true;
+        else return false;            
+           
+            
         }
         
         //converts all spaces to underscore characters
